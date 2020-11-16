@@ -92,6 +92,11 @@ img {
     padding: 20px;
 }
 
+::selection {
+    color: white;
+    background: black;
+}
+
 @media screen and (max-width: 1200px) {
     /* Make a two column-layout instead of four */
     .column {
