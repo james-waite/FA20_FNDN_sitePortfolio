@@ -72,6 +72,14 @@ body {
     padding: 20px;
 }
 
+.imgText {
+    width: 100%;
+    height: 100px;
+    background: #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 img {
     width: 100%;
 }
