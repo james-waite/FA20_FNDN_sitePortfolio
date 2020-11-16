@@ -2,13 +2,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Navbar */
 .header {
-    overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 10px;
 }
@@ -43,15 +49,52 @@ body {
     float: right;
 }
 
-.main {
+/* Sets the wrapping and auto height of our flexbox */
+.row {
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    padding: 2px 10px;
+}
+
+/* Create four equal columns that sit next to one another */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 20px 10px;
+}
+
+.column img {
+    padding-bottom: 20px;
+}
+
+.content {
     padding: 20px;
 }
 
-.image {
+img {
     width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+/* Sticky Footer at bottom of page */
+.footer {
+    flex-shrink: 0;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    /* Make a two column-layout instead of four */
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 800px) {
+    /* Collapses navbar into single column */
     .header a{
         float: none;
         display: block;
@@ -60,5 +103,13 @@ body {
 
     .header-right {
         float: none;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Make a single column-layout instead of four */
+    .column {
+        flex: 100%;
+        max-width: 100%;
     }
 }
