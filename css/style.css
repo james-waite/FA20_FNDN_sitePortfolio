@@ -72,6 +72,10 @@ body {
     padding: 20px;
 }
 
+.content a {
+    text-decoration: none;
+}
+
 .imgText {
     width: 100%;
     height: 100px;
