@@ -86,6 +86,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Set all of our images to the full width of whatever element they are inside of */
 img {
     width: 100%;
 }
